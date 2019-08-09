@@ -37,21 +37,13 @@ namespace GOLKata
             Assert.Equal(result, Game.CellState.Dead);
 
         }
-        [Fact]
-        public void CellsWithExactlyTwoNeighborsStayAlive()
-        {
+        [Theory]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void CellsWithTwoOrThreeNeighborsStayAlive(int value){
             var currentState = Game.CellState.Alive;
 
-            var result = Game.gameRules(currentState, 2);
-
-            Assert.Equal(result, Game.CellState.Alive);
-        }
-        [Fact]
-        public void CellsWithExactlyThreeNeighborsStayAlive()
-        {
-            var currentState = Game.CellState.Alive;
-
-            var result = Game.gameRules(currentState, 3);
+            var result = Game.gameRules(currentState, value);
 
             Assert.Equal(result, Game.CellState.Alive);
         }
