@@ -18,11 +18,11 @@ namespace GOLKata
        // [InlineData(2)]
         public void CellsWithLessThanTwoLiveNeighborsDies(int value)
         {
-            var currentState = Game.CellState.Alive;
+            var currentState = CellState.Alive;
             
             var result = Game.gameRules(currentState, value);
 
-            Assert.Equal(result, Game.CellState.Dead );
+            Assert.Equal(result, CellState.Dead );
         }
         [Theory]
         [InlineData(4)]
@@ -30,30 +30,30 @@ namespace GOLKata
         [InlineData(8)]
         public void CellsWithMoreThanThreeLiveNeighborsDies(int value)
         {
-            var currentState = Game.CellState.Alive;
+            var currentState = CellState.Alive;
 
             var result = Game.gameRules(currentState, value);
 
-            Assert.Equal(result, Game.CellState.Dead);
+            Assert.Equal(result, CellState.Dead);
 
         }
         [Theory]
         [InlineData(2)]
         [InlineData(3)]
         public void CellsWithTwoOrThreeNeighborsStayAlive(int value){
-            var currentState = Game.CellState.Alive;
+            var currentState = CellState.Alive;
 
             var result = Game.gameRules(currentState, value);
 
-            Assert.Equal(result, Game.CellState.Alive);
+            Assert.Equal(result, CellState.Alive);
         }
         [Fact]
         public void CellsWithExactlyThreeNeighborsBecomesAlive(){
-            var currentState = Game.CellState.Dead;
+            var currentState = CellState.Dead;
 
             var result = Game.gameRules(currentState, 3);
 
-            Assert.Equal(result, Game.CellState.Alive);
+            Assert.Equal(result, CellState.Alive);
         }
     }
 }

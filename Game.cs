@@ -1,12 +1,13 @@
 namespace GOLKata
 {
-    public class Game
-    {
-        public enum CellState 
+     public enum CellState 
         {
             Alive,
             Dead
         }
+    public class Game
+    {
+       
 
         public static CellState gameRules(CellState currentState, int liveNeighbors){
               switch (currentState)
