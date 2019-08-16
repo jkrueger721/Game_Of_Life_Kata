@@ -1,5 +1,7 @@
 # Game_Of_Life_Kata
- ## cd to GOLKata directory
+
+### clone repo
+### cd to GOLKata directory
 ### You can run this program by command "dotnet run" .
 ### You can run test by command "dotnet test" 
         
