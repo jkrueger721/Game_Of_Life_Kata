@@ -5,12 +5,7 @@ namespace GOLKata
 {
     public class GameTest
     {
-        // private readonly Game _game;
-
-        // public GameTest()
-        // {
-        //     _game = new Game();
-        // }
+     
         
         [Theory]
         [InlineData(0)]
